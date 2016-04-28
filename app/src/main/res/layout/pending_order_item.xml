@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlstatic"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="5dip"
+        android:background="@drawable/workavaibility_bg">
+
+        <ImageView
+            android:id="@+id/imgCar"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/worker_profile_list" />
+
+        <Button
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imgCar"
+            android:layout_margin="3dip"
+            android:background="#3B9435"
+            android:text="Award"
+            android:textColor="#FFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_toRightOf="@+id/imgCar"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/order_jobdone" />
+
+                <TextView
+                    android:id="@+id/txtOrderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgname"
+                    android:padding="5dip"
+                    android:text="Car was job 1"
+                    android:textColor="#1A1A55"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img2"
+                    android:padding="5dip"
+                    android:text="214, Titanium Center , Anand Nagar Road,Ahmedabad" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/order_star" />
+                <RatingBar
+                    android:id="@+id/rbrate"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgAmount"
+                    android:progressTint="#EAEC31"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:rating="3" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

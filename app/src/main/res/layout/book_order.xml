@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.glintcarwash.com.glintapp.BookOrderActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/actionbar_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Book an order"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/actionbar_font" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/jopbtitle" />
+
+                    <EditText
+                        android:id="@+id/edtJobTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:hint="job title"
+                        android:padding="5dip"
+                        android:textColorHint="#B1B1B1"
+                        android:textSize="14dip" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cardetails" />
+
+
+                    <Spinner
+                        android:id="@+id/spnSelectCar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:padding="5dip"
+                        android:textColorHint="#B1B1B1"
+                        android:textSize="14dip" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:adjustViewBounds="true"
+                        android:rotation="90"
+                        android:src="@drawable/cardarrow" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+                <LinearLayout
+                    android:id="@+id/llAddcar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/card" />
+
+                    <Spinner
+                        android:id="@+id/spnSelectCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:padding="5dip"
+                        android:textColorHint="#B1B1B1"
+                        android:textSize="14dip" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:adjustViewBounds="true"
+                        android:rotation="90"
+                        android:src="@drawable/cardarrow" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+                <LinearLayout
+                    android:id="@+id/llCarColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/color" />
+
+                    <Spinner
+                        android:id="@+id/spnSelectParkingType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:padding="5dip"
+                        android:textColorHint="#B1B1B1"
+                        android:textSize="14dip" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlColor"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"></RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/colorpicker"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:rotation="90"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/cardarrow" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+                <LinearLayout
+                    android:id="@+id/llAdditionalInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/nickname" />
+
+                    <EditText
+                        android:id="@+id/edtAdditional"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:hint="Address Instructions"
+                        android:padding="5dip"
+                        android:textColor="#B1B1B1"
+                        android:textSize="14dip" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+
+                <LinearLayout
+                    android:id="@+id/llMyloc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/nickname" />
+
+                    <EditText
+                        android:id="@+id/edtllMyloc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:hint="My Location"
+                        android:padding="5dip"
+                        android:textColor="#B1B1B1"
+                        android:textSize="14dip" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#B5B5B5" />
+
+
+                <LinearLayout
+                    android:id="@+id/llR7Prmo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/coupon" />
+
+                    <EditText
+                        android:id="@+id/edtllMyloc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:hint="Promo code"
+                        android:padding="5dip"
+                        android:textColor="#B1B1B1"
+                        android:textSize="14dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dip"
+                android:background="#01004C"
+                android:padding="5dip"
+                android:text="SAVE"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

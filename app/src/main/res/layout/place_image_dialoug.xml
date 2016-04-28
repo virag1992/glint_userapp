@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000"
+    tools:context="com.mfoodx.app.PlaceImageDialoug" >
+
+    <RelativeLayout
+        android:id="@+id/rlQuot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imgPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlQuot"
+        android:layout_alignRight="@+id/rlQuot"
+        android:layout_marginBottom="-40dp"
+        android:layout_marginRight="-15dp"
+        android:background="#00000000" >
+
+        <ImageView
+            android:id="@+id/imageCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="cancleClick" />
+    </RelativeLayout>
+
+</RelativeLayout>

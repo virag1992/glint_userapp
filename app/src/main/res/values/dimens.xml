@@ -1,0 +1,101 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="gap">10dp</dimen>
+    <dimen name="radius">3dp</dimen>
+    <dimen name="gap_small">5dp</dimen>
+    <dimen name="gap_large">20dp</dimen>
+    <dimen name="text">20sp</dimen>
+
+
+    <!--<dimen name="edittext_height">@dimen/_35sdp</dimen>-->
+    <!--<dimen name="edittext_radious">@dimen/_5sdp</dimen>-->
+
+    <!--<dimen name="button_height">@dimen/_35sdp</dimen>-->
+    <!--<dimen name="button_corner_radious">@dimen/_20sdp</dimen>-->
+    <!--<dimen name="splash_logo_size">@dimen/_100sdp</dimen>-->
+    <!--<dimen name="login_logo_size">@dimen/_85sdp</dimen>-->
+
+    <!--<dimen name="splash_appname_font_size">@dimen/_30sdp</dimen>-->
+    <!--<dimen name="appname_font_size">@dimen/_20sdp</dimen>-->
+    <!--<dimen name="medium_font_size">@dimen/_14sdp</dimen>-->
+    <!--<dimen name="normal_font_size">@dimen/_12sdp</dimen>-->
+    <!--<dimen name="small_font_size">@dimen/_10sdp</dimen>-->
+    <!--<dimen name="very_small_font_size">@dimen/_9sdp</dimen>-->
+    <!--<dimen name="header_font_size">@dimen/_14sdp</dimen>-->
+    <!--<dimen name="sub_item_font_size">@dimen/_13sdp</dimen>-->
+
+    <!--<dimen name="login_signup_padding">@dimen/_40sdp</dimen>-->
+    <!--<dimen name="button_margin">@dimen/_25sdp</dimen>-->
+    <!--<dimen name="edittext_text_padding">@dimen/_10sdp</dimen>-->
+
+    <!--<dimen name="custom_item_padding">@dimen/_12sdp</dimen>-->
+    <!--<dimen name="home_bottom_icons_padding">@dimen/_5sdp</dimen>-->
+    <!--<dimen name="divider_height">@dimen/_1sdp</dimen>-->
+    <!--<dimen name="my_account_item_padding">@dimen/_15sdp</dimen>-->
+    <!--<dimen name="arrow_size">@dimen/_15sdp</dimen>-->
+    <!--<dimen name="corner_radius">0dp</dimen>-->
+    <!--<dimen name="my_books_icon_size">@dimen/_28sdp</dimen>-->
+
+    <!--<dimen name="player_item_padding">@dimen/_10sdp</dimen>-->
+    <!--<dimen name="timing_padding">@dimen/_5sdp</dimen>-->
+
+    <!--<dimen name="activity_padding">@dimen/_16sdp</dimen>-->
+    <!--<dimen name="items_margin_top">@dimen/_10sdp</dimen>-->
+    <!--<dimen name="items_padding">@dimen/_6sdp</dimen>-->
+    <!--<dimen name="items_margin_right_left">@dimen/_5sdp</dimen>-->
+    <!--<dimen name="album_art_padding">0dp</dimen>-->
+    <!--<dimen name="horizontal_list_size">@dimen/_100sdp</dimen>-->
+    <!--<dimen name="cart_item_image_width">@dimen/_80sdp</dimen>-->
+    <!--<dimen name="cart_item_image_height">@dimen/_100sdp</dimen>-->
+
+
+    <!--<dimen name="player_setting_item_padding">@dimen/_15sdp</dimen>-->
+    <!--<dimen name="player_setting_item_height">@dimen/_40sdp</dimen>-->
+    <!--<dimen name="recommend_item_size">@dimen/_100sdp</dimen>-->
+    <!--<dimen name="recommend_item_size_width">@dimen/_80sdp</dimen>-->
+    <!--<dimen name="recommend_item_size_height">@dimen/_100sdp</dimen>-->
+    <!--<dimen name="fragment_padding">@dimen/_3sdp</dimen>-->
+    <!--<dimen name="card_elevation">@dimen/_10sdp</dimen>-->
+    <!--<dimen name="custom_card_elevation">@dimen/_3sdp</dimen>-->
+
+    <!--&lt;!&ndash;-->
+    <!--Refer to App Widget Documentation for margin information-->
+    <!--http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout-->
+    <!--&ndash;&gt;-->
+    <!--<dimen name="widget_margin">8dp</dimen>-->
+
+
+    <dimen name="padding_normal">12dp</dimen>
+    <dimen name="padding_xlarge">18dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="text_size_normal_small">13sp</dimen>
+    <dimen name="text_size_normal">19sp</dimen>
+    <dimen name="text_size_normal_plus">20sp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_xlarge">20dp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
+
+
+    <dimen name="card_radius">2dp</dimen>
+    <dimen name="cardview_default_elevation">1dp</dimen>
+
+
+    <dimen name="card_width_normal">300dp</dimen>
+    <dimen name="card_height_normal">180dp</dimen>
+    <dimen name="chip_width_normal">54dp</dimen>
+    <dimen name="chip_height_normal">36dp</dimen>
+    <dimen name="inner_chip_width_normal">28dp</dimen>
+    <dimen name="inner_chip_height_normal">16dp</dimen>
+    <dimen name="logo_width_normal">48dp</dimen>
+    <dimen name="logo_height_normal">48dp</dimen>
+    <dimen name="center_image_width">75dp</dimen>
+    <dimen name="center_image_height">75dp</dimen>
+
+
+</resources>

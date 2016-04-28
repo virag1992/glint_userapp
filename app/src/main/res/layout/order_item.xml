@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@drawable/workavaibility_bg">
+
+        <RelativeLayout
+            android:id="@+id/rltop"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:background="#4296D7">
+
+            <TextView
+                android:id="@+id/txtOrderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:text="Car was job 1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:layout_toLeftOf="@+id/imgOrderStatus"
+                android:padding="10dip"
+                android:text="In Progress"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@drawable/cancle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlmiddel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltop"
+            android:layout_marginTop="20dip"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_date" />
+
+            <TextView
+                android:id="@+id/datelabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgDate"
+                android:padding="5dip"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/datelabl"
+                android:padding="5dip"
+                android:text="Feb 5, 2016" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlmiddel"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_location" />
+
+            <TextView
+                android:id="@+id/locationlabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgLocation"
+                android:padding="5dip"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/locationlabl"
+                android:padding="5dip"
+                android:text="201, Titanium City Center, Anand nagar Road , Prahlad nagar, Ahmmedabad" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

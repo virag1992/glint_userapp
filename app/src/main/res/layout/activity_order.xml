@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroumd"
+    android:layout_height="match_parent"
+    tools:context="app.glintcarwash.com.glintapp.MainActivity">
+
+
+    <ListView
+        android:id="@+id/lstOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dip"
+        android:divider="@color/white"
+        android:dividerHeight="15dip"></ListView>
+
+</RelativeLayout>

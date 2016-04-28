@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">GlintApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="verifytext">Generous he rises in the crowns defence, To curb the factious tongue of insolence, Such just examples on offenders shown, Sedition silence, and assert the throne.</string>
+
+    <!--Drawer========-->
+    <string-array name="nav_drawer_items">
+        <item>Hiren</item>
+        <item>Home</item>
+        <item>My Profile</item>
+        <item>Notifications</item>
+        <item>Referral and promotions</item>
+        <item>My orders</item>
+        <item>Contact us</item>
+        <item>Inbox</item>
+        <item>Help</item>
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/menu_home</item>
+        <item>@drawable/menu_profile</item>
+        <item>@drawable/menu_notification</item>
+        <item>@drawable/menu_referral</item>
+        <item>@drawable/order</item>
+        <item>@drawable/menu_contactus</item>
+        <item>@drawable/menu_messages</item>
+        <item>@drawable/menu_help</item>
+        <item>@drawable/menu_logout</item>
+    </array>
+
+
+    <string name="next">NEXT</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="done">DONE</string>
+    <string name="card_holder_name_sample">JOHN MATTHEW</string>
+
+    <string-array name="cars">
+        <item>Select Car</item>
+        <item>BMW</item>
+        <item>Audi</item>
+
+    </string-array>
+    <string-array name="Parkingtype">
+        <item>Select Parking type</item>
+        <item>Type 1</item>
+        <item>Type 2</item>
+
+    </string-array>
+    <string-array name="cards">
+        <item>Select Card</item>
+        <item>SBI</item>
+        <item>AXIS</item>
+        <item>ICICI</item>
+
+    </string-array>
+
+</resources>

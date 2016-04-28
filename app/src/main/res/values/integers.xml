@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_animation_duration">500</integer>
+    <integer name="grid_columns">3</integer>
+    <integer name="image_fade_duration">1000</integer>
+</resources>

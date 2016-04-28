@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgLogoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:adjustViewBounds="true"
+        android:src="@drawable/profileplaceholder" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSaveAccount"
+        android:layout_below="@+id/imgLogoLogin" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgUserPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:hint="Firstname"
+                    android:padding="5dip"
+                    android:textColorHint="#B1B1B1"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dip"
+                    android:background="#B5B5B5" />
+
+                <EditText
+                    android:id="@+id/edtLastnamed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:hint="Lastname"
+                    android:padding="5dip"
+                    android:textColorHint="#B1B1B1"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:background="#B5B5B5" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/mobile" />
+
+                <EditText
+                    android:id="@+id/edtMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:padding="5dip"
+                    android:textColorHint="#B1B1B1"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:background="#B5B5B5" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/location" />
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="top"
+                    android:hint="Address"
+                    android:padding="5dip"
+                    android:textColorHint="#B1B1B1"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:background="#B5B5B5" />
+
+            <LinearLayout
+                android:id="@+id/llAddcar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/model" />
+
+                <TextView
+                    android:id="@+id/edtAddCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="top"
+                    android:hint="Add Car"
+                    android:padding="5dip"
+                    android:textColor="#B1B1B1"
+                    android:textSize="14dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nextarrow" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:background="#B5B5B5" />
+
+            <LinearLayout
+                android:id="@+id/llAddcard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/card" />
+
+                <TextView
+                    android:id="@+id/edtAddCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:gravity="top"
+                    android:hint="Add Card"
+                    android:padding="5dip"
+                    android:textColor="#B1B1B1"
+                    android:textSize="14dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nextarrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:background="@drawable/register_rectangle"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/coupon" />
+
+                <EditText
+                    android:id="@+id/edtEnterReferel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:hint="Enter Referal Code"
+                    android:padding="5dip"
+                    android:textColor="#B1B1B1"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dip"
+        android:background="#01004C"
+        android:padding="5dip"
+        android:text="SAVE"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

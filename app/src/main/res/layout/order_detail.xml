@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/actionbar_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Order Detail"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/actionbar_font" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/contact_us_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rltop"
+                android:layout_width="wrap_content"
+                android:layout_height="48dip"
+                android:background="#4296D7">
+
+                <TextView
+                    android:id="@+id/txtOrderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dip"
+                    android:text="Car was job 1"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOrderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/imgOrderStatus"
+                    android:padding="10dip"
+                    android:text="In Progress"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgOrderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/cancle" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgCardDetail"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_below="@+id/rltop"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/dummy_car" />
+
+            <RelativeLayout
+                android:id="@+id/rlmiddel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgCardDetail"
+                android:layout_marginTop="20dip"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_date" />
+
+                <TextView
+                    android:id="@+id/datelabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgDate"
+                    android:padding="5dip"
+                    android:text="Date" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/datelabl"
+                    android:padding="5dip"
+                    android:text="Feb 5, 2016" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlbottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlmiddel"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/locationlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgLocation"
+                    android:padding="5dip"
+                    android:text="Location" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/locationlabl"
+                    android:padding="5dip"
+                    android:text="201, Titanium City Center, Anand nagar Road , Prahlad nagar, Ahmmedabad" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlbottom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_money" />
+
+                <TextView
+                    android:id="@+id/amountlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgAmount"
+                    android:padding="5dip"
+                    android:text="Amount" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amountlabl"
+                    android:padding="5dip"
+                    android:text="$210.90" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlbottom2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom1"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgjob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/order_jobdone" />
+
+                <TextView
+                    android:id="@+id/jobdonelable"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgjob"
+                    android:padding="5dip"
+                    android:text="Job done by" />
+
+                <ImageView
+                    android:id="@+id/imgjobdoneby"
+                    android:layout_width="45dip"
+                    android:layout_height="45dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/jobdonelable"
+                    android:src="@drawable/order_jobprofile" />
+
+                <TextView
+                    android:id="@+id/txtJobeDoneBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgjobdoneby"
+                    android:padding="5dip"
+                    android:text="Hiren Patel" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom2"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_star" />
+
+                <TextView
+                    android:id="@+id/ratinglbl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgRating"
+                    android:padding="5dip"
+                    android:text="Ratings" />
+
+                <RatingBar
+                    android:id="@+id/rbrate"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center"
+                    android:layout_toRightOf="@+id/ratinglbl"
+                    android:gravity="center"
+                    android:numStars="5"
+                    android:progressTint="#EAEC31"
+                    android:rating="3" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlRating"
+                android:background="@color/actionbar_bg"
+                android:text="Procced to payment"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroumd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroumd">
+
+            <EditText
+                android:id="@+id/edtContatcUs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btnSendContactUs"
+                android:layout_alignParentTop="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/contact_us_bg"
+                android:gravity="top"
+                android:padding="10dip" />
+
+            <Button
+                android:id="@+id/btnSendContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dip"
+                android:background="#01358B"
+                android:text="SEND"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

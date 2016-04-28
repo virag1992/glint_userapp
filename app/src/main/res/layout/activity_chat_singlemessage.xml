@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/singleMessageContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profileplaceholder"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@drawable/chatl">
+
+        <TextView
+            android:id="@+id/singleMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dip"
+            android:padding="10dp"
+            android:paddingLeft="10dip"
+            android:text="Hello bubbles!"
+            android:textColor="@android:color/primary_text_light" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/singleMessageContainerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/chatr">
+
+        <TextView
+            android:id="@+id/singleMessageRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dip"
+            android:padding="10dp"
+            android:paddingLeft="10dip"
+            android:text="Hello bubbles!"
+            android:textColor="@android:color/primary_text_light" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            android:src="@drawable/profileplaceholder"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
