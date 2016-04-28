@@ -67,24 +67,38 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+
                     android:layout_marginRight="5dip"
                     android:src="@drawable/cancle" />
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/imgCardDetail"
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dip"
-                android:layout_below="@+id/rltop"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/dummy_car" />
+                android:layout_height="200dp"
+                android:layout_below="@+id/rltop" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+            <!--<ImageView-->
+            <!--android:id="@+id/imgCardDetail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dip"-->
+            <!--android:layout_below="@+id/rltop"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/dummy_car" />-->
 
             <RelativeLayout
                 android:id="@+id/rlmiddel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgCardDetail"
+                android:layout_below="@+id/custom_indicator"
                 android:layout_marginTop="20dip"
                 android:padding="2dip">
 

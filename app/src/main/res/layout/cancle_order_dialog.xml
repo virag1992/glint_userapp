@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="PAYMENT CONFIRMATION"
+            android:text="CANCLE ORDER"
             android:textColor="#FFFFFF"
             android:textSize="20dip" />
     </RelativeLayout>
@@ -28,7 +28,7 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:padding="20dip"
-        android:text="Are you sure to make this orders as completed?"
+        android:text="Are you sure to cancle this job? Cancellation will charge you $2.0"
         android:textSize="20dip" />
 
     <TextView

@@ -1,8 +1,12 @@
 package app.glintcarwash.com.glintapp;
 
 import android.annotation.TargetApi;
+import android.app.ActionBar;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,7 +15,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,6 +35,8 @@ public class PendigOrderActivity extends BaseActivity implements View.OnClickLis
 
     public Toolbar toolbar;
     ListView lstPending;
+    Button btnCancleOrder;
+    Dialog PaymentDialog;
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
@@ -38,6 +47,7 @@ public class PendigOrderActivity extends BaseActivity implements View.OnClickLis
         initDrawer(savedInstanceState);
 //        action = getActionBar();
         lstPending = (ListView) findViewById(R.id.lstPending);
+        btnCancleOrder = (Button) findViewById(R.id.btnCancel);
         ArrayList<OrderInfo> m_temp = new ArrayList<OrderInfo>();
         for (int i = 0; i < 8; i++) {
             OrderInfo car = new OrderInfo();
@@ -49,7 +59,7 @@ public class PendigOrderActivity extends BaseActivity implements View.OnClickLis
         }
         CustomAdapter adapter = new CustomAdapter(this, m_temp);
         lstPending.setAdapter(adapter);
-
+        btnCancleOrder.setOnClickListener(this);
     }
 
     @Override
@@ -110,7 +120,9 @@ public class PendigOrderActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-
+        if (v.equals(btnCancleOrder)) {
+            ShowPayment();
+        }
 
     }
 
@@ -191,5 +203,36 @@ public class PendigOrderActivity extends BaseActivity implements View.OnClickLis
             private TextView txtOrderTitle, txtStatus, txtDate, txtLocation;
             ImageView imgStatus;
         }
+    }
+
+    public void ShowPayment() {
+        PaymentDialog = new Dialog(PendigOrderActivity.this);
+        PaymentDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        PaymentDialog.getWindow().setBackgroundDrawable(
+                new ColorDrawable(Color.TRANSPARENT));
+        PaymentDialog.getWindow().setLayout(
+                ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        View v1 = getLayoutInflater().inflate(R.layout.cancle_order_dialog,
+                null);
+        Button btnNo = (Button) v1.findViewById(R.id.btnNo);
+        Button btnYes = (Button) v1.findViewById(R.id.btnYes);
+
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PaymentDialog.dismiss();
+            }
+        });
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PaymentDialog.dismiss();
+            }
+        });
+        PaymentDialog.setContentView(v1);
+        PaymentDialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        PaymentDialog.setCancelable(false);
+        PaymentDialog.show();
     }
 }

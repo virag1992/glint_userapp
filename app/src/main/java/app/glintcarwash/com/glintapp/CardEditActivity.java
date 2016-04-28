@@ -25,7 +25,7 @@ import static com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_HOLD
 import static com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_NUMBER;
 
 
-public class CardEditActivity extends AppCompatActivity {
+public class CardEditActivity extends BaseActivity {
 
 
     int mLastPageSelected = 0;
@@ -38,7 +38,7 @@ public class CardEditActivity extends AppCompatActivity {
     private CardFragmentAdapter mCardAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.cooltechworks.creditcarddesign.R.layout.activity_card_edit);
 
@@ -50,11 +50,10 @@ public class CardEditActivity extends AppCompatActivity {
 
                 int max = pager.getAdapter().getCount();
 
-                if(pager.getCurrentItem() == max -1) {
+                if (pager.getCurrentItem() == max - 1) {
                     // if last card.
                     onDoneTapped();
-                }
-                else {
+                } else {
                     showNext();
                 }
             }
@@ -70,10 +69,9 @@ public class CardEditActivity extends AppCompatActivity {
         mCreditCardView = (CreditCardView) findViewById(com.cooltechworks.creditcarddesign.R.id.credit_card_view);
 
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             checkParams(savedInstanceState);
-        }
-        else {
+        } else {
             checkParams(getIntent().getExtras());
         }
 
@@ -84,7 +82,7 @@ public class CardEditActivity extends AppCompatActivity {
     private void checkParams(Bundle bundle) {
 
 
-        if(bundle == null) {
+        if (bundle == null) {
             return;
         }
         mCardHolderName = bundle.getString(EXTRA_CARD_HOLDER_NAME);
@@ -99,8 +97,7 @@ public class CardEditActivity extends AppCompatActivity {
         mCreditCardView.setCardNumber(mCardNumber);
 
 
-
-        if(mCardAdapter != null) {
+        if (mCardAdapter != null) {
             mCardAdapter.notifyDataSetChanged();
         }
     }
@@ -113,11 +110,11 @@ public class CardEditActivity extends AppCompatActivity {
 
         int text = com.cooltechworks.creditcarddesign.R.string.next;
 
-        if(pager.getCurrentItem() == max -1) {
+        if (pager.getCurrentItem() == max - 1) {
             text = com.cooltechworks.creditcarddesign.R.string.done;
         }
 
-        ((TextView)findViewById(com.cooltechworks.creditcarddesign.R.id.next)).setText(text);
+        ((TextView) findViewById(com.cooltechworks.creditcarddesign.R.id.next)).setText(text);
     }
 
     public void loadPager() {
@@ -125,7 +122,8 @@ public class CardEditActivity extends AppCompatActivity {
         ViewPager pager = (ViewPager) findViewById(com.cooltechworks.creditcarddesign.R.id.card_field_container_pager);
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
 
             @Override
             public void onPageSelected(int position) {
@@ -145,11 +143,12 @@ public class CardEditActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) {}
+            public void onPageScrollStateChanged(int state) {
+            }
         });
         pager.setOffscreenPageLimit(4);
 
-        mCardAdapter = new CardFragmentAdapter(getSupportFragmentManager(),getIntent().getExtras());
+        mCardAdapter = new CardFragmentAdapter(getSupportFragmentManager(), getIntent().getExtras());
         mCardAdapter.setOnCardEntryCompleteListener(new ICardEntryCompleteListener() {
             @Override
             public void onCardEntryComplete(int currentIndex) {
@@ -162,7 +161,7 @@ public class CardEditActivity extends AppCompatActivity {
                 switch (currentIndex) {
                     case 0:
 
-                        mCardNumber = entryValue.replace(CreditCardUtils.SPACE_SEPERATOR,"");
+                        mCardNumber = entryValue.replace(CreditCardUtils.SPACE_SEPERATOR, "");
                         mCreditCardView.setCardNumber(mCardNumber);
                         break;
                     case 1:
@@ -174,7 +173,7 @@ public class CardEditActivity extends AppCompatActivity {
                         mCreditCardView.setCVV(entryValue);
                         break;
                     case 3:
-                        mCardHolderName  = entryValue;
+                        mCardHolderName = entryValue;
                         mCreditCardView.setCardHolderName(entryValue);
                         break;
                 }
@@ -186,10 +185,10 @@ public class CardEditActivity extends AppCompatActivity {
 
     public void onSaveInstanceState(Bundle outState) {
 
-        outState.putString(EXTRA_CARD_CVV,mCVV);
-        outState.putString(EXTRA_CARD_HOLDER_NAME,mCardHolderName);
-        outState.putString(EXTRA_CARD_EXPIRY,mExpiry);
-        outState.putString(EXTRA_CARD_NUMBER,mCardNumber);
+        outState.putString(EXTRA_CARD_CVV, mCVV);
+        outState.putString(EXTRA_CARD_HOLDER_NAME, mCardHolderName);
+        outState.putString(EXTRA_CARD_EXPIRY, mExpiry);
+        outState.putString(EXTRA_CARD_NUMBER, mCardNumber);
 
 
         super.onSaveInstanceState(outState);
@@ -242,7 +241,7 @@ public class CardEditActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_CARD_NUMBER, mCardNumber);
 
 
-        setResult(RESULT_OK,intent);
+        setResult(RESULT_OK, intent);
         finish();
 
 
@@ -278,7 +277,7 @@ public class CardEditActivity extends AppCompatActivity {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
-    
+
     @Override
     public void onBackPressed() {
         this.finish();

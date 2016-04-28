@@ -1,18 +1,21 @@
 package app.glintcarwash.com.glintapp;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -31,8 +34,8 @@ import global.ProgressWheel;
 public class ProfileFragment extends Fragment implements View.OnClickListener {
     Dialog DialogForTransaction;
     ProgressWheel progressWheel;
-    LinearLayout llAddcar,llAddcard;
-
+    LinearLayout llAddcar, llAddcard;
+    ImageView imgLogoLogin;
     ArrayList<Integer> m_draw = new ArrayList<Integer>();
 
     public static ProfileFragment getInstance() {
@@ -45,11 +48,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v= inflater.inflate(R.layout.account_setup,container,false);
+        View v = inflater.inflate(R.layout.account_setup, container, false);
         llAddcar = (LinearLayout) v.findViewById(R.id.llAddcar);
         llAddcard = (LinearLayout) v.findViewById(R.id.llAddcard);
+        imgLogoLogin = (ImageView) v.findViewById(R.id.imgLogoLogin);
         llAddcar.setOnClickListener(this);
         llAddcard.setOnClickListener(this);
+        imgLogoLogin.setOnClickListener(this);
         return v;
     }
 
@@ -62,6 +67,32 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         m_draw.add(Color.parseColor("#03C03C"));
         m_draw.add(Color.parseColor("#FDFD96"));
 
+    }
+
+    public void SelectImage() {
+        final CharSequence[] items = {"Take Photo", "Choose from Library", "Cancel"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Add Photo!");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                if (items[item].equals("Take Photo")) {
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent, 100);
+                } else if (items[item].equals("Choose from Library")) {
+                    Intent intent = new Intent(
+                            Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    intent.setType("image/*");
+                    startActivityForResult(
+                            Intent.createChooser(intent, "Select File"),
+                            101);
+                } else if (items[item].equals("Cancel")) {
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
     }
 
     public void showProgress() {
@@ -125,6 +156,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             DialogForTransaction = null;
         }
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -139,20 +171,22 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v==llAddcard){
+        if (v == llAddcard) {
 //            Intent start = new Intent(getActivity(),CreditCardActivity.class);
 //            startActivity(start);
-            Intent intent = new Intent(getActivity(), CardEditActivity.class);
+            Intent intent = new Intent(getActivity(), CardListActivity.class);
             startActivityForResult(intent, 0);
-        }else if(v==llAddcar){
-            Intent start = new Intent(getActivity(),AddCarActivity.class);
+        } else if (v == llAddcar) {
+            Intent start = new Intent(getActivity(), MyCarListActivity.class);
             startActivity(start);
+        } else if (v == imgLogoLogin) {
+            SelectImage();
         }
     }
 
     public void onActivityResult(int reqCode, int resultCode, Intent data) {
 
-        if(resultCode == getActivity().RESULT_OK) {
+        if (resultCode == getActivity().RESULT_OK) {
             String name = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_HOLDER_NAME);
             String cardNumber = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_NUMBER);
             String expiry = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_EXPIRY);
