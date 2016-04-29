@@ -5,8 +5,38 @@
     android:layout_height="match_parent"
     tools:context="app.glintcarwash.com.glintapp.CardListActivity">
 
-    <ListView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView" />
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/actionbar_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="My Cards"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/actionbar_font" />
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/btnAddCard"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnAddCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbar_bg"
+        android:layout_alignParentBottom="true"
+        android:text="Add New Card"
+        android:textColor="#FFFFFF" />
 </RelativeLayout>
