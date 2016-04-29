@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import global.global.ProgressWheel;
+import global.ProgressWheel;
 import model.CarInfo;
 
 /**

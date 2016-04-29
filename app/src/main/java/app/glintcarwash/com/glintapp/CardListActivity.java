@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -37,6 +38,8 @@ public class CardListActivity extends BaseActivity {
                 startActivity(start);
             }
         });
+        ListViewCustomAdapter adp = new ListViewCustomAdapter(this);
+        listView.setAdapter(adp);
     }
 
     public void setActionBar() {
@@ -74,6 +77,17 @@ public class CardListActivity extends BaseActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void initDrawer(Bundle savedInstanceState) {
 

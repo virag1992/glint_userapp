@@ -35,7 +35,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
-import global.global.Utils;
+import global.Utils;
 import permission.auron.com.marshmallowpermissionhelper.PermissionResult;
 import permission.auron.com.marshmallowpermissionhelper.PermissionUtils;
 import permission.auron.com.marshmallowpermissionhelper.ActivityManagePermission;
@@ -62,7 +62,7 @@ public class MapsActivity extends ActivityManagePermission implements OnMapReady
 
     public static boolean mMapIsTouched = false;
 
-    public  boolean doCAll = false;
+    public boolean doCAll = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +102,7 @@ public class MapsActivity extends ActivityManagePermission implements OnMapReady
                         //permission granted
                         //replace with your action
 //                                            mMap.setMyLocationEnabled(true);
-                        Toast.makeText(getApplicationContext(),"Please accept permission.",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Please accept permission.", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -150,7 +150,7 @@ public class MapsActivity extends ActivityManagePermission implements OnMapReady
             public void onClick(View v) {
             }
         });
-        if(doCAll) {
+        if (doCAll) {
             Location l = Utils.getCurrentLocation(this);
             if (l != null) {
                 if (p_lat != 0 && p_lon != 0) {
@@ -210,12 +210,6 @@ public class MapsActivity extends ActivityManagePermission implements OnMapReady
                                     .include(ABAD).build();
                             mMap.moveCamera(CameraUpdateFactory
                                     .newLatLngBounds(bounds, 50));
-
-
-
-
-
-
 
 
 //                            if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -390,7 +384,6 @@ public class MapsActivity extends ActivityManagePermission implements OnMapReady
 
             }
         }
-
 
 
     }

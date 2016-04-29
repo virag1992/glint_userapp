@@ -1,4 +1,4 @@
-package global.global;
+package global;
 
 import java.io.IOException;
 import java.util.List;

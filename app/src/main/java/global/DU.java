@@ -1,4 +1,4 @@
-package global.global;
+package global;
 
 import android.widget.DatePicker;
 

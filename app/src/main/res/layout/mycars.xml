@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroumd"
-    android:orientation="vertical"
-    android:padding="3dip">
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
@@ -24,20 +24,22 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_font" />
     </android.support.v7.widget.Toolbar>
+
     <ListView
         android:id="@+id/lstMyCar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
         android:layout_above="@+id/btnAddCar"
+        android:layout_below="@+id/toolbar"
         android:divider="@color/white"
         android:dividerHeight="5dp"></ListView>
+
     <Button
         android:id="@+id/btnAddCar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/actionbar_bg"
         android:layout_alignParentBottom="true"
+        android:background="@color/actionbar_bg"
         android:text="Add Car"
         android:textColor="#FFFFFF" />
 </RelativeLayout>

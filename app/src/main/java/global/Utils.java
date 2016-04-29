@@ -1,4 +1,4 @@
-package global.global;
+package global;
 
 /**
  * Created by Dharmesh on 9/3/2015.
