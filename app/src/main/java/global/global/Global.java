@@ -1,4 +1,4 @@
-package global;
+package global.global;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -35,7 +35,6 @@ import android.widget.TextView;
 
 
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -433,9 +432,9 @@ public class Global {
     }
 
     public static void changeViewFont(Context mContext, View... views) {
-        Typeface tfHelveticaNeueRegular = Typeface.createFromAsset(mContext.getAssets(), Constants.FontRegular);
+        Typeface tfHelveticaNeueRegular = Typeface.createFromAsset(mContext.getAssets(), global.Constants.FontRegular);
 
-        Typeface tfHelveticaNeueBold = Typeface.createFromAsset(mContext.getAssets(), Constants.FontBold);
+        Typeface tfHelveticaNeueBold = Typeface.createFromAsset(mContext.getAssets(), global.Constants.FontBold);
 
         Typeface tfCurrView;
         for (View view : views) {
@@ -799,7 +798,7 @@ public class Global {
         File filepath = Environment.getExternalStorageDirectory();
 
         // Create a new folder in SD Card
-        File dir = new File(filepath.getAbsolutePath() + "/" + Constants.MediaFolderName + "/");
+        File dir = new File(filepath.getAbsolutePath() + "/" + global.Constants.MediaFolderName + "/");
         dir.mkdirs();
 
         // Create a name for the saved image

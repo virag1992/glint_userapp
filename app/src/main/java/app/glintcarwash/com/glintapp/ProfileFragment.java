@@ -11,22 +11,20 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import com.cooltechworks.creditcarddesign.*;
-import com.cooltechworks.creditcarddesign.CreditCardView;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import global.ProgressWheel;
+import global.global.ProgressWheel;
 
 /**
  * Created by ACER on 05-04-2016.
@@ -35,6 +33,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     Dialog DialogForTransaction;
     ProgressWheel progressWheel;
     LinearLayout llAddcar, llAddcard;
+    EditText edtAddress;
     ImageView imgLogoLogin;
     ArrayList<Integer> m_draw = new ArrayList<Integer>();
 
@@ -51,6 +50,20 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.account_setup, container, false);
         llAddcar = (LinearLayout) v.findViewById(R.id.llAddcar);
         llAddcard = (LinearLayout) v.findViewById(R.id.llAddcard);
+        edtAddress = (EditText) v.findViewById(R.id.edtAddress);
+
+        edtAddress.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent start = new Intent(getActivity(), MapsActivity.class);
+                    startActivity(start);
+                }
+                return false;
+            }
+        });
+
+
         imgLogoLogin = (ImageView) v.findViewById(R.id.imgLogoLogin);
         llAddcar.setOnClickListener(this);
         llAddcard.setOnClickListener(this);
@@ -177,6 +190,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             Intent intent = new Intent(getActivity(), CardListActivity.class);
             startActivityForResult(intent, 0);
         } else if (v == llAddcar) {
+//            Intent start = new Intent(getActivity(), AddCarActivity.class);
             Intent start = new Intent(getActivity(), MyCarListActivity.class);
             startActivity(start);
         } else if (v == imgLogoLogin) {

@@ -22,8 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import global.ProgressWheel;
-import model.CarInfo;
 import model.OrderInfo;
 
 /**

@@ -1,4 +1,4 @@
-package global;
+package global.global;
 
 import android.app.Activity;
 import android.app.Application;
@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Foreground implements Application.ActivityLifecycleCallbacks {
 
 	public static final long CHECK_DELAY = 500;
-	public static final String TAG = Foreground.class.getName();
+	public static final String TAG = global.Foreground.class.getName();
 
 	public interface Listener {
 
@@ -22,7 +22,7 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
 		public void onBecameBackground();
 
 	}
-	private static Foreground instance;
+	private static global.Foreground instance;
 
 	private boolean foreground = true, paused = true;
 	private Handler handler = new Handler();
@@ -38,23 +38,23 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
 	 * @param application
 	 * @return an initialised Foreground instance
 	 */
-	public static Foreground init(Application application) {
+	public static global.Foreground init(Application application) {
 
 		if (instance == null) {
-			instance = new Foreground();
+			instance = new global.Foreground();
 			application.registerActivityLifecycleCallbacks(instance);
 		}
 		return instance;
 	}
 
-	public static Foreground get(Application application) {
+	public static global.Foreground get(Application application) {
 		if (instance == null) {
 			init(application);
 		}
 		return instance;
 	}
 
-	public static Foreground get(Context ctx) {
+	public static global.Foreground get(Context ctx) {
 		if (instance == null) {
 			Context appCtx = ctx.getApplicationContext();
 			if (appCtx instanceof Application) {
@@ -67,7 +67,7 @@ public class Foreground implements Application.ActivityLifecycleCallbacks {
 		return instance;
 	}
 
-	public static Foreground get() {
+	public static global.Foreground get() {
 		if (instance == null) {
 			throw new IllegalStateException(
 					"Foreground is not initialised - invoke "
