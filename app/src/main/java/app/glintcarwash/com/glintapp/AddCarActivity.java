@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
 public class AddCarActivity extends BaseActivity {
     LinearLayout llCarColor;
     RelativeLayout imgcolor;
+    
     public Toolbar toolbar;
 
     @Override
