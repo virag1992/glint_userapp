@@ -1,4 +1,4 @@
-package global;
+package global.global;
 
 import android.app.Activity;
 import android.content.pm.PackageInfo;

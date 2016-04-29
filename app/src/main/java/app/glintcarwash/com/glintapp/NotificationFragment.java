@@ -3,7 +3,6 @@ package app.glintcarwash.com.glintapp;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -20,8 +19,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import global.ProgressWheel;
 
 /**
  * Created by ACER on 05-04-2016.

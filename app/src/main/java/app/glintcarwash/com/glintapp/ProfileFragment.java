@@ -2,28 +2,25 @@ package app.glintcarwash.com.glintapp;
 
 import android.app.ActionBar;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import com.cooltechworks.creditcarddesign.*;
-import com.cooltechworks.creditcarddesign.CreditCardView;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import global.ProgressWheel;
+import global.global.ProgressWheel;
 
 /**
  * Created by ACER on 05-04-2016.
@@ -31,7 +28,8 @@ import global.ProgressWheel;
 public class ProfileFragment extends Fragment implements View.OnClickListener {
     Dialog DialogForTransaction;
     ProgressWheel progressWheel;
-    LinearLayout llAddcar,llAddcard;
+    LinearLayout llAddcar, llAddcard;
+    EditText edtAddress;
 
     ArrayList<Integer> m_draw = new ArrayList<Integer>();
 
@@ -45,9 +43,23 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v= inflater.inflate(R.layout.account_setup,container,false);
+        View v = inflater.inflate(R.layout.account_setup, container, false);
         llAddcar = (LinearLayout) v.findViewById(R.id.llAddcar);
         llAddcard = (LinearLayout) v.findViewById(R.id.llAddcard);
+        edtAddress = (EditText) v.findViewById(R.id.edtAddress);
+
+        edtAddress.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent start = new Intent(getActivity(), MapsActivity.class);
+                    startActivity(start);
+                }
+                return false;
+            }
+        });
+
+
         llAddcar.setOnClickListener(this);
         llAddcard.setOnClickListener(this);
         return v;
@@ -125,6 +137,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             DialogForTransaction = null;
         }
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -139,20 +152,20 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v==llAddcard){
+        if (v == llAddcard) {
 //            Intent start = new Intent(getActivity(),CreditCardActivity.class);
 //            startActivity(start);
             Intent intent = new Intent(getActivity(), CardEditActivity.class);
             startActivityForResult(intent, 0);
-        }else if(v==llAddcar){
-            Intent start = new Intent(getActivity(),AddCarActivity.class);
+        } else if (v == llAddcar) {
+            Intent start = new Intent(getActivity(), AddCarActivity.class);
             startActivity(start);
         }
     }
 
     public void onActivityResult(int reqCode, int resultCode, Intent data) {
 
-        if(resultCode == getActivity().RESULT_OK) {
+        if (resultCode == getActivity().RESULT_OK) {
             String name = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_HOLDER_NAME);
             String cardNumber = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_NUMBER);
             String expiry = data.getStringExtra(com.cooltechworks.creditcarddesign.CreditCardUtils.EXTRA_CARD_EXPIRY);

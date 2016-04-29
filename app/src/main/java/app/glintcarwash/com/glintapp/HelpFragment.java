@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Random;
 
-import global.ProgressWheel;
+import global.global.ProgressWheel;
 
 /**
  * Created by ACER on 05-04-2016.

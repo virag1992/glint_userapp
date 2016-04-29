@@ -1,4 +1,4 @@
-package global;
+package global.global;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -28,7 +28,7 @@ import app.glintcarwash.com.glintapp.R;
  *         http://www.apache.org/licenses/LICENSE-2.0
  */
 public class ProgressWheel extends View {
-    private static final String TAG = ProgressWheel.class.getSimpleName();
+    private static final String TAG = global.ProgressWheel.class.getSimpleName();
 
     /**
      * *********
