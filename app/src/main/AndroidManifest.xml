@@ -86,7 +86,6 @@
             android:name=".PendigOrderActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-<<<<<<< HEAD
         <activity android:name=".NotificationActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
